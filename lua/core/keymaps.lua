@@ -13,7 +13,7 @@ keymap('n', '<c-l>', '<c-w>l', opts)
 
 -- Press jk fast to exit insert and other modes:
 keymap("i", "jk", "<ESC>", opts)
-keymap("v", "jk", "<ESC>", opts)
+--keymap("v", "jk", "<ESC>", opts)
 
 -- Tab navigation:
 keymap('n', "<leader>tn", ":tabnew<cr>", opts)
