@@ -27,4 +27,4 @@ end
 
 --Theme
 vim.cmd([[colorscheme gruvbox]])
---Hack Nerd Font Mono
+

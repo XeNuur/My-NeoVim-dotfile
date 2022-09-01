@@ -24,3 +24,7 @@ keymap('n', "<leader>tt", ":tabnext<cr>", opts)
 
 -- Clear search faster
 keymap('n', "<c-_>", ":noh<cr>", opts)
+
+-- Fancy way to search for files
+keymap('n', "<c-e>", ":Telescope find_files<cr>", opts)
+
