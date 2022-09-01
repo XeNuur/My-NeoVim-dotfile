@@ -1,7 +1,6 @@
-require 'settings'
-require 'keymaps'
+require 'core.settings'
+require 'core.keymaps'
 
-return require('packer').startup(function() 
-   use 'wbthomason/packer.nvim'
-   use 'ellisonleao/gruvbox.nvim'
-end)
+require 'plugins.packer'
+require 'plugins.lualine'
+

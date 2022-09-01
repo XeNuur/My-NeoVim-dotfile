@@ -22,3 +22,5 @@ keymap('n', "<leader>tc", ":tabclose<cr>", opts)
 keymap('n', "<leader>tm", ":tabmove<cr>", opts)
 keymap('n', "<leader>tt", ":tabnext<cr>", opts)
 
+-- Clear search faster
+keymap('n', "<c-_>", ":noh<cr>", opts)
