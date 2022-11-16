@@ -1,7 +1,9 @@
-require 'core.settings'
-require 'core.keymaps'
-
 require 'plugins.packer'
 require 'plugins.lualine'
-require 'plugins.toggleterm'
+require 'plugins.nvim-tree'
+require 'plugins.telescope'
+require 'plugins.barbar'
+
+require 'core.settings'
+require 'core.keymaps'
 

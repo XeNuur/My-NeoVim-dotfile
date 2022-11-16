@@ -11,7 +11,8 @@ local options = {
    relativenumber = true,
    lazyredraw = true,
 
-   background = "dark", --Dark mode for theme
+   background = "dark",
+   termguicolors = true,
 }
 
 -- no alert about editing file with swap
@@ -26,5 +27,5 @@ for k, v in pairs(global) do
 end
 
 --Theme
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme tokyonight]])
 

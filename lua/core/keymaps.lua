@@ -16,15 +16,32 @@ keymap("i", "jk", "<ESC>", opts)
 --keymap("v", "jk", "<ESC>", opts)
 
 -- Tab navigation:
-keymap('n', "<leader>tn", ":tabnew<cr>", opts)
-keymap('n', "<leader>to", ":tabonly<cr>", opts)
-keymap('n', "<leader>tc", ":tabclose<cr>", opts)
-keymap('n', "<leader>tm", ":tabmove<cr>", opts)
-keymap('n', "<leader>tt", ":tabnext<cr>", opts)
+keymap('n', '<A-T>', "<Cmd>BufferMovePrevious<CR>", opts)
+keymap('n', '<A-Y>', "<Cmd>BufferMoveNext<CR>", opts)
+
+keymap('n', '<A-t>', "<Cmd>BufferPrevious<CR>", opts)
+keymap('n', '<A-y>', "<Cmd>BufferNext<CR>", opts)
+
+keymap('n', "<A-n>", ":tabnew<cr>", opts)
+keymap('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
+
+keymap('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', opts)
+keymap('n', '<A-2>', '<Cmd>BufferGoto 2<CR>', opts)
+keymap('n', '<A-3>', '<Cmd>BufferGoto 3<CR>', opts)
+keymap('n', '<A-4>', '<Cmd>BufferGoto 4<CR>', opts)
+keymap('n', '<A-5>', '<Cmd>BufferGoto 5<CR>', opts)
+keymap('n', '<A-6>', '<Cmd>BufferGoto 6<CR>', opts)
+keymap('n', '<A-7>', '<Cmd>BufferGoto 7<CR>', opts)
+keymap('n', '<A-8>', '<Cmd>BufferGoto 8<CR>', opts)
+keymap('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', opts)
+keymap('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
 
 -- Clear search faster
 keymap('n', "<c-_>", ":noh<cr>", opts)
 
--- Fancy way to search for files
-keymap('n', "<c-e>", ":Telescope find_files<cr>", opts)
+-- Fancy way to search for files and more...
+keymap('n', "<leader>e", ":Telescope find_files<cr>", opts)
+keymap('n', "<leader>b", ":Telescope buffers<cr>", opts)
+keymap('n', "<leader>c", ":Telescope colorscheme<cr>", opts)
+keymap('n', "<leader>/", ":Telescope current_buffer_fuzzy_find<cr>", opts)
 
