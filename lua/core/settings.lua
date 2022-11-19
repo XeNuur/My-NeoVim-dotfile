@@ -9,7 +9,7 @@ local options = {
 
    wrap = false,
    relativenumber = true,
-   lazyredraw = true,
+   --lazyredraw = true,
 
    background = "dark",
    termguicolors = true,

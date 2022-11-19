@@ -10,6 +10,10 @@ return require('packer').startup(function()
    use 'nvim-tree/nvim-tree.lua'
    use 'nvim-lualine/lualine.nvim'
    use 'romgrk/barbar.nvim'
+   use 'startup-nvim/startup.nvim'
+
+   --Other Language Support
+   use 'habamax/vim-godot'
 
    --others
    use {

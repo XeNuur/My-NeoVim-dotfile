@@ -36,7 +36,7 @@ keymap('n', '<A-8>', '<Cmd>BufferGoto 8<CR>', opts)
 keymap('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', opts)
 keymap('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
 
--- Clear search faster
+-- Clear the searches faster
 keymap('n', "<c-_>", ":noh<cr>", opts)
 
 -- Fancy way to search for files and more...
@@ -45,3 +45,5 @@ keymap('n', "<leader>b", ":Telescope buffers<cr>", opts)
 keymap('n', "<leader>c", ":Telescope colorscheme<cr>", opts)
 keymap('n', "<leader>/", ":Telescope current_buffer_fuzzy_find<cr>", opts)
 
+--Toggle the tree
+keymap('n', "<leader>t", ":NvimTreeToggle<cr>", opts)
