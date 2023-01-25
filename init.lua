@@ -8,3 +8,4 @@ require 'plugins.startup'
 require 'core.settings'
 require 'core.keymaps'
 
+require 'lsp'

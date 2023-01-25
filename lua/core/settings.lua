@@ -27,5 +27,5 @@ for k, v in pairs(global) do
 end
 
 --Theme
-vim.cmd([[colorscheme tokyonight]])
+vim.cmd([[colorscheme tokyonight-night]])
 

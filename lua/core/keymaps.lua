@@ -1,6 +1,9 @@
 local opts = { noremap = true, silent = true}
 local keymap = vim.api.nvim_set_keymap
 
+-- Help me
+keymap('n', '<c-f>', ':Telescope keymaps<cr>', opts)
+
 -- Faster saving:
 keymap('n', '<leader>w', ':w!<cr>', opts)
 keymap('n', '<leader>W', ':wa!<cr>', opts)
@@ -47,3 +50,15 @@ keymap('n', "<leader>/", ":Telescope current_buffer_fuzzy_find<cr>", opts)
 
 --Toggle the tree
 keymap('n', "<leader>t", ":NvimTreeToggle<cr>", opts)
+
+--Hop macros
+keymap('n', "s", ":HopWordAC<cr>", opts)
+keymap('n', "S", ":HopWordBC<cr>", opts)
+
+keymap('n', "<c-s>", ":HopChar1<cr>", opts)
+keymap('n', "<c-S>", ":HopChar2<cr>", opts)
+
+keymap('n', '<leader>s', ':HopLineAC<cr>', opts) 
+keymap('n', '<leader>S', ':HopLineBC<cr>', opts) 
+
+

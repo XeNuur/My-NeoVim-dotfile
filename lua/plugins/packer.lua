@@ -21,7 +21,6 @@ return require('packer').startup(function()
        'nvim-telescope/telescope.nvim', tag = '0.1.0',
        requires = { {'nvim-lua/plenary.nvim'} }
    }
-
    use {
      'phaazon/hop.nvim',
      branch = 'v2', -- optional but strongly recommended
@@ -31,5 +30,22 @@ return require('packer').startup(function()
      end
    }
 
-end)
+   -- LSP server
+   use 'neovim/nvim-lspconfig'
+   use 'williamboman/mason-lspconfig.nvim'
+   use 'williamboman/mason.nvim'
 
+   -- LSP plugins
+   use {
+      'hrsh7th/nvim-cmp',
+      requires = {
+          { 'hrsh7th/cmp-buffer' },
+          { 'hrsh7th/cmp-nvim-lsp' },
+          { 'saadparwaiz1/cmp_luasnip' },
+          { 'L3MON4D3/LuaSnip' },
+      }
+   }
+
+   --syntax
+   use 'nvim-treesitter/nvim-treesitter'
+end)
