@@ -48,4 +48,7 @@ return require('packer').startup(function()
 
    --syntax
    use 'nvim-treesitter/nvim-treesitter'
+
+   --debug 
+   use 'dstein64/vim-startuptime'
 end)
