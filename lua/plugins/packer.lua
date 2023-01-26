@@ -12,7 +12,12 @@ return require('packer').startup(function()
    use 'nvim-lualine/lualine.nvim'
    use 'romgrk/barbar.nvim'
    use 'startup-nvim/startup.nvim'
-
+   use {
+     "folke/zen-mode.nvim",
+     config = function()
+       require("zen-mode").setup{}
+     end
+   }
    --Language Support
    use 'habamax/vim-godot'
 
