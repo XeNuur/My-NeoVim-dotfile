@@ -28,10 +28,28 @@ require('mason-lspconfig').setup({
 require('lspconfig').sumneko_lua.setup{}
 
 --syntax
-require'nvim-treesitter.configs'.setup {
-   ensure_installed = { 'lua' },
-   auto_install = true,
-   highlight = {
-      enable = true,
+local compilers = { "cc", "gcc", "clang", "cl", "zig" }
+local cc_env = vim.fn.getenv('CC')
+if type(cc_env) == 'string' then
+   table.insert(compilers, cc_env)
+end
+
+function path_in_existment(arr)
+   for _, it in ipairs(arr) do
+      if vim.fn.executable(it) == 1 then
+         return true
+      end
+   end
+   return false
+end
+
+if path_in_existment(compilers) then
+   require'nvim-treesitter.install'.prefer_git = false
+   require'nvim-treesitter.configs'.setup {
+      ensure_installed = { 'lua' },
+      auto_install = true,
+      highlight = {
+         enable = true,
+      }
    }
-}
+end
