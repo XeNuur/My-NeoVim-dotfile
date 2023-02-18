@@ -20,10 +20,10 @@ keymap('n', '<c-k>', '<c-w>k', opts)
 keymap('n', '<c-l>', '<c-w>l', opts)
 
 -- Press jk fast to exit insert and other modes:
-keymap_multimode(function (md)
-   keymap(md, "jk", "<ESC>", opts)
-   keymap(md, "jk", "<ESC>", opts)
-end, {'i', 'v'})
+-- keymap_multimode(function (md)
+--   keymap(md, "jk", "<ESC>", opts)
+--   keymap(md, "jk", "<ESC>", opts)
+-- end, {'i', 'v'})
 
 -- Tab navigation:
 keymap('n', '<A-T>', "<Cmd>BufferMovePrevious<CR>", opts)
