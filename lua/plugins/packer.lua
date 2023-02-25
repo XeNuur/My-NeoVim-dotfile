@@ -11,7 +11,6 @@ return require('packer').startup(function()
    use 'nvim-tree/nvim-tree.lua'
    use 'nvim-lualine/lualine.nvim'
    use 'romgrk/barbar.nvim'
-   use 'startup-nvim/startup.nvim'
    use {
      "folke/zen-mode.nvim",
      config = function()
