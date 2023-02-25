@@ -10,10 +10,7 @@ require 'bufferline'.setup {
   icons = false,
 
   icon_custom_colors = false,
-
-  icon_separator_active = '▎',
-  icon_separator_inactive = '▎',
-  icon_close_tab = '',
+  icon_close_tab = ' ',
   icon_close_tab_modified = '●',
   icon_pinned = '車',
 
