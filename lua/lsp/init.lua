@@ -26,9 +26,13 @@ local lsp_server_list = {
 }
 
 require('mason').setup()
-require('mason-lspconfig').setup({
-   ensure_installed = lsp_server_list
-})
+local m = require('mason-lspconfig')
+m.setup({ ensure_installed = lsp_server_list })
+m.setup_handlers{
+   function (server_name)
+      require('lspconfig') [server_name].setup{}
+   end
+}
 
 for _, it in pairs(lsp_server_list) do
    require('lspconfig')[it].setup{}
@@ -60,3 +64,4 @@ if path_in_existment(compilers) then
       }
    }
 end
+

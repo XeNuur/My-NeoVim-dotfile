@@ -6,13 +6,15 @@ require 'bufferline'.setup {
   exclude_ft = {'javascript'},
   exclude_name = {'package.json'},
 
-  hide = {current = false, inactive = false, visible = false},
-  icons = false,
+  hide = { current = false, inactive = false, visible = false },
+  icons = {
+	filetype = { enabled = false },
 
+	pinned = {button = '^'},
+        modified = {button = '●'},
+        button = {button = ' '},
+  },
   icon_custom_colors = false,
-  icon_close_tab = ' ',
-  icon_close_tab_modified = '●',
-  icon_pinned = '車',
 
   insert_at_end = false,
   insert_at_start = false,
@@ -23,5 +25,5 @@ require 'bufferline'.setup {
 
   semantic_letters = true,
   letters = 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP',
-  no_name_title = "NoName",
+  no_name_title = "[emptniac]",
 }
