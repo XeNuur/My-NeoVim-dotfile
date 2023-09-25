@@ -66,6 +66,9 @@ local pm = require('lazy').setup({
    },
    --syntax for LSP
    'nvim-treesitter/nvim-treesitter',
+
+   --vimwiki
+   'vimwiki/vimwiki',
 })
 return pm
 
