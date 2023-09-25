@@ -21,9 +21,7 @@ cmp.setup {
 }
 
 -- language server
-local lsp_server_list = {
-   'lua_ls'
-}
+local lsp_server_list = {}
 
 require('mason').setup()
 local m = require('mason-lspconfig')
@@ -33,10 +31,6 @@ m.setup_handlers{
       require('lspconfig') [server_name].setup{}
    end
 }
-
-for _, it in pairs(lsp_server_list) do
-   require('lspconfig')[it].setup{}
-end
 
 -- syntax server
 local compilers = { "cc", "gcc", "clang", "cl", "zig" }
