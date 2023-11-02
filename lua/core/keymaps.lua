@@ -55,20 +55,13 @@ keymap('n', "<leader>b", "<Cmd>Telescope buffers<cr>", opts)
 keymap('n', "<leader>c", "<Cmd>Telescope colorscheme<cr>", opts)
 keymap('n', "<leader>/", "<Cmd>Telescope current_buffer_fuzzy_find<cr>", opts)
 
---Toggle the tree
+-- Toggle the tree
 keymap('n', "<leader>t", "<Cmd>NvimTreeToggle<cr>", opts)
 
---Hop macros
---keymap_multimode(function (md)
---   keymap(md, "s", "<cmd>HopWordAC<cr>", opts)
---   keymap(md, "S", "<cmd>HopWordBC<cr>", opts)
---
---   keymap(md, "<c-s>", "<cmd>HopChar1<cr>", opts)
---
---   keymap(md, '<leader>s', '<cmd>HopLineAC<cr>', opts)
---   keymap(md, '<leader>S', '<cmd>HopLineBC<cr>', opts)
---end, {'n', 'v'})
+-- Terminal stuff
+keymap('t', "<Esc>", "<C-\\><C-n>", opts)
+keymap('n', "<c-p>", "<Cmd>ToggleTerm<cr>", opts)
 
---Toggle 'Zen mode'
+-- Toggle 'Zen mode'
 keymap('n', '<leader>z', '<cmd>ZenMode<cr>', opts)
 

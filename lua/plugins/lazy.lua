@@ -67,6 +67,9 @@ local pm = require('lazy').setup({
 
    --vimwiki
    'vimwiki/vimwiki',
+
+   --terminal
+  {'akinsho/toggleterm.nvim', version = "*", config = true}
 })
 return pm
 
