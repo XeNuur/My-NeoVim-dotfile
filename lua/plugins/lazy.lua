@@ -41,12 +41,10 @@ local pm = require('lazy').setup({
        dependencies = { {'nvim-lua/plenary.nvim'} }
    },
    {
-     'phaazon/hop.nvim',
-     branch = 'v2', -- optional but strongly recommended
-     config = function()
-       -- you can configure Hop the way you like here; see :h hop-config
-       require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-     end
+      'ggandor/leap.nvim',
+      config = function()
+         require('leap').add_default_mappings()
+      end
    },
 
    -- LSP server
