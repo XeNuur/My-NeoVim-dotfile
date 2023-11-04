@@ -1,6 +1,22 @@
-require('lualine').setup {
+local mode_str = {
+   ['n'] = "NRML",
+   ['i'] = "IN",
+   ['c'] = "CMD",
+   ['t'] = "TERM",
+}
+
+local function custom_mode()
+   local mod = vim.fn.mode()
+   local ret = mode_str[mod]
+   if(ret) then
+      return ret
+   end 
+   return string.upper(mod) 
+end
+
+require 'lualine'.setup {
   options = {
-    icons_enabled = false,
+    icons_enabled = true,
     theme = 'auto',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
@@ -18,12 +34,13 @@ require('lualine').setup {
     }
   },
   sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
-    lualine_x = {'encoding', 'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
+    lualine_a = {custom_mode},
+    lualine_b = {'filename', 'filetype'},
+    lualine_c = {'branch', 'diff', 'diagnostics'},
+
+    lualine_x = {'encoding'},
+    lualine_y = {'progress', 'location'},
+    lualine_z = {}
   },
   inactive_sections = {
     lualine_a = {},

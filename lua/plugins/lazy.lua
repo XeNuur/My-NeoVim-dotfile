@@ -16,7 +16,6 @@ local pm = require('lazy').setup({
    --Themes
    'folke/tokyonight.nvim',
    'ellisonleao/gruvbox.nvim',
-   'dylanaraps/wal.vim',
 
    --Gui
    'nvim-tree/nvim-tree.lua',

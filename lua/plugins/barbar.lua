@@ -1,6 +1,6 @@
 require 'bufferline'.setup {
   animation = false,
-  auto_hide = false,
+  auto_hide = true,
   tabpages = true,
 
   exclude_ft = {'javascript'},
@@ -8,11 +8,13 @@ require 'bufferline'.setup {
 
   hide = { current = false, inactive = false, visible = false },
   icons = {
-	filetype = { enabled = false },
+	filetype = { enabled = true },
 
 	pinned = {button = '^'},
         modified = {button = '●'},
         button = {button = ' '},
+
+        buffer_index = true
   },
   icon_custom_colors = false,
 
