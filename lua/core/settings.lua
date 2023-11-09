@@ -1,3 +1,5 @@
+local args = require 'arg'
+
 local global = {
    mapleader = ",",
 }
@@ -12,7 +14,7 @@ local options = {
    --lazyredraw = true,
 
    background = "dark",
-   --termguicolors = true,
+   termguicolors = true,
 }
 
 -- no alert about editing file with swap
@@ -27,5 +29,7 @@ for k, v in pairs(global) do
 end
 
 --Theme
-vim.cmd([[colorscheme gruvbox]])
+if not args.is_tty then
+   vim.cmd([[colorscheme onedark]])
+end 
 

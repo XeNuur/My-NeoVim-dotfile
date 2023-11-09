@@ -1,3 +1,4 @@
+local args = require 'arg'
 local function on_attach(bufnr)
   local api = require('nvim-tree.api')
 
@@ -22,8 +23,9 @@ require("nvim-tree").setup({
       git_placement = "after",
  
       show = {
-         file = true,
-         folder_arrow = false,
+         file = args.icons,
+         folder = args.icons,
+         folder_arrow = args.icons,
       } 
     }
   },

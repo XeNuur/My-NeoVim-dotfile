@@ -1,7 +1,11 @@
+local args = require 'arg'
 local actions = require "telescope.actions"
 
 require('telescope').setup{
    defaults = {
+      --disable_devicons = not require 'arg'.icons,
+      disable_devicons = true,
+
       prompt_prefix = "❯ ",
       selection_caret = "❯ ",
       layout_strategy = "horizontal",
@@ -17,5 +21,14 @@ require('telescope').setup{
             ["<esc>"] = actions.close
           }
       },
-   }
+   },
+
+pickers = {
+  find_files = {
+    disable_devicons = not args.icons
+  },
+  buffers = {
+    disable_devicons = not args.icons 
+  },
+},
 }

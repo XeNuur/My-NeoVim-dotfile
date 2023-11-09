@@ -1,6 +1,7 @@
 local mode_str = {
    ['n'] = "NO",
    ['i'] = "IN",
+   ['v'] = "VI",
    ['c'] = "CMD",
    ['t'] = "TERM",
 }
@@ -16,7 +17,7 @@ end
 
 require 'lualine'.setup {
   options = {
-    icons_enabled = true,
+    icons_enabled = require 'arg'.icons,
     theme = 'auto',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},

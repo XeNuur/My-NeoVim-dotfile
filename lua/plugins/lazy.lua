@@ -14,8 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 
 local pm = require('lazy').setup({
    --Themes
-   'folke/tokyonight.nvim',
    'ellisonleao/gruvbox.nvim',
+   'navarasu/onedark.nvim',
 
    --Gui
    'nvim-tree/nvim-tree.lua',

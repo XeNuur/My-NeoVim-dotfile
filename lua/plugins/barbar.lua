@@ -8,13 +8,15 @@ require 'bufferline'.setup {
 
   hide = { current = false, inactive = false, visible = false },
   icons = {
-	filetype = { enabled = true },
+	filetype = { 
+           enabled = require 'arg'.icons
+        },
 
 	pinned = {button = '^'},
         modified = {button = '●'},
         button = {button = ' '},
 
-        buffer_index = true
+        buffer_index = false 
   },
   icon_custom_colors = false,
 
