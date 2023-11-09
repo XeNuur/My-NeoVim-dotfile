@@ -1,3 +1,9 @@
+local args = require 'arg'
+local separator = '▎'
+if args.is_tty then
+   separator = ''
+end
+
 require 'bufferline'.setup {
   animation = false,
   auto_hide = true,
@@ -9,14 +15,15 @@ require 'bufferline'.setup {
   hide = { current = false, inactive = false, visible = false },
   icons = {
 	filetype = { 
-           enabled = require 'arg'.icons
+           enabled = args.icons
         },
 
 	pinned = {button = '^'},
         modified = {button = '●'},
         button = {button = ' '},
 
-        buffer_index = false 
+        separator = {left = separator, right = ''},
+        separator_at_end = false,
   },
   icon_custom_colors = false,
 
