@@ -1,5 +1,5 @@
 local mode_str = {
-   ['n'] = "NL",
+   ['n'] = "NO",
    ['i'] = "IN",
    ['c'] = "CMD",
    ['t'] = "TERM",
