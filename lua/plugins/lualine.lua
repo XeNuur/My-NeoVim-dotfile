@@ -2,8 +2,8 @@ local mode_str = {
    ['n'] = "NO",
    ['i'] = "IN",
    ['v'] = "VI",
-   ['c'] = "CMD",
-   ['t'] = "TERM",
+   ['c'] = "CD",
+   ['t'] = "TM",
 }
 
 local function custom_mode()
@@ -46,7 +46,7 @@ require 'lualine'.setup {
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = {'filename'},
+    lualine_c = {'filename', 'filetype'},
     lualine_x = {'location'},
     lualine_y = {},
     lualine_z = {}
