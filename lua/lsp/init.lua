@@ -1,3 +1,7 @@
+if not require 'arg'.notlsp then
+    return
+end
+
 --cmp
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 
@@ -30,6 +34,12 @@ m.setup_handlers{
    function (server_name)
       require('lspconfig') [server_name].setup{}
    end
+}
+
+-- enable custom language server
+require('lspconfig') .gdscript.setup{
+    force_setup = true,
+    filetypes = {'gd', 'gdscript', 'gdscript3' }
 }
 
 -- syntax server

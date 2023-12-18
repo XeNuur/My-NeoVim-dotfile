@@ -5,8 +5,8 @@ local global = {
 }
 
 local options = {
-   expandtab = true,
-   shiftwidth = 3,
+   expandtab   = true,
+   shiftwidth  = 4,
    softtabstop = 3,
 
    wrap = false,
