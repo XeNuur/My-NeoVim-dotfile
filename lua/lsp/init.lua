@@ -14,13 +14,21 @@ cmp.setup {
   },
 
   mapping = {
-    ['<Tab>'] = cmp.mapping.confirm({ select = true }),
-    ['<c-q>'] = cmp.mapping.abort()
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item.
   },
 
   sources = {
+    {name = 'path'},
     { name = "nvim_lsp" },
     { name = "buffer" },
+  },
+
+  window = {
+    documentation = cmp.config.window.bordered()
   },
 }
 
@@ -39,7 +47,10 @@ m.setup_handlers{
 -- enable custom language server
 require('lspconfig') .gdscript.setup{
     force_setup = true,
-    filetypes = {'gd', 'gdscript', 'gdscript3' }
+    filetypes = {'gd', 'gdscript', 'gdscript3' },
+    flags = {
+      debounce_text_changes = 150,
+    }
 }
 
 -- syntax server
