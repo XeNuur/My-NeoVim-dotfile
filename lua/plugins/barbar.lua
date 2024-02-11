@@ -14,7 +14,7 @@ require 'bufferline'.setup {
 
   hide = { current = false, inactive = false, visible = false },
   icons = {
-	filetype = { 
+	filetype = {
            enabled = args.icons
         },
 
@@ -24,6 +24,8 @@ require 'bufferline'.setup {
 
         separator = {left = separator, right = ''},
         separator_at_end = false,
+
+        buffer_index = true,
   },
   icon_custom_colors = false,
 

@@ -30,6 +30,6 @@ end
 
 --Theme
 if not args.is_tty then
-   vim.cmd([[colorscheme onedark]])
+   vim.cmd([[colorscheme gruvbox]])
 end 
 
