@@ -44,6 +44,7 @@ keymap('n', "<leader>e", "<Cmd>Telescope find_files<cr>", opts)
 keymap('n', "<leader>b", "<Cmd>Telescope buffers<cr>", opts)
 keymap('n', "<leader>c", "<Cmd>Telescope colorscheme<cr>", opts)
 keymap('n', "<leader>r", "<Cmd>Telescope current_buffer_fuzzy_find<cr>", opts)
+keymap('n', "<leader>R", "<Cmd>Telescope live_grep<cr>", opts)
 keymap('n', '<leader>h', '<cmd>Telescope keymaps<cr>', opts) -- Help me
 
 -- Toggle the tree

@@ -32,7 +32,7 @@ local pm = require('lazy').setup({
             require('nvim-cursorline').setup {
              cursorline = {
                enable = true,
-               timeout = 0,
+               timeout = 1000,
                number = false,
              },
              cursorword = {
