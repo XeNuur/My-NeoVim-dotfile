@@ -38,22 +38,14 @@ cmp.setup {
 local lsp_server_list = {}
 
 require('mason').setup()
-local m = require('mason-lspconfig')
-m.setup({ ensure_installed = lsp_server_list })
-m.setup_handlers{
-   function (server_name)
-      require('lspconfig') [server_name].setup{}
-   end
-}
+local mason_lspcfg = require('mason-lspconfig')
+mason_lspcfg.setup({ ensure_installed = lsp_server_list, automatic_enable = true })
 
--- enable custom language server
-require('lspconfig') .gdscript.setup{
-    force_setup = true,
-    filetypes = {'gd', 'gdscript', 'gdscript3' },
-    flags = {
-      debounce_text_changes = 150,
-    }
-}
+--local capabilities = vim.lsp.protocol.make_client_capabilities()
+--capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
+vim.lsp.config("*", {})
+vim.diagnostic.config({ virtual_text = false, virtual_lines = { current_line = true }, }) 
 
 -- syntax server
 local compilers = { "cc", "gcc", "clang", "cl", "zig" }

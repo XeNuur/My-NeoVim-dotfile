@@ -15,6 +15,14 @@ for _, it in ipairs(require('lazy').plugins()) do
     pcall(require, package)
 end
 
+--Godot exclusive
+local gdproject = io.open(vim.fn.getcwd()..'/project.godot', 'r')
+if gdproject then
+    io.close(gdproject)
+    vim.fn.serverstart '/tmp/godot.pipe'
+    print("listening on godot pipe!")
+end
+
 require 'lsp'
 require 'core.settings'
 require 'core.keymaps'
